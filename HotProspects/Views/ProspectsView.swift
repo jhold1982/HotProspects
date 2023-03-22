@@ -89,7 +89,7 @@ struct ProspectsView: View {
             }
             .confirmationDialog("Sort by...", isPresented: $isShowingSortOptions) {
                 Button("Name (A - Z)") { sortOrder = .name }
-                Button("Date (New - Old") { sortOrder = .date }
+                Button("Date (New - Old)") { sortOrder = .date }
             }
             .sheet(isPresented: $isShowingScanner) {
                 CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: handleScan)
